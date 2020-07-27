@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 export default function BarNav() {
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">React-Google-Books-Search</Navbar.Brand>
+            <Navbar.Brand href="/">React-Google-Books-Search</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
