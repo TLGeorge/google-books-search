@@ -1,7 +1,5 @@
-const BookSchema = require('./books')
-
 module.exports = {
-    BookSchema
+    Book: require("./book")
 
 }
 
