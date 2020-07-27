@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from 'react-router-dom'
 import Nav from './components/Navbar/navbar';
-import { Search, Saved } from './components'
+import { Search, Saved } from './pages'
 import GBJumbotron from "./components/Jumbotron/jumbotron";
 
 

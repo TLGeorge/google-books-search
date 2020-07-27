@@ -1,5 +1,70 @@
 # google-books-search
+![Custom badge](https://img.shields.io/badge/GoogleBooksSearch-React-orange)
+    
+ 
+## Table of Contents
+ * [Description](#Description)
+ * [Installation](#Installation)
+ * [Usage](#Usage)
+ * [License](#License)
+ * [Contributing](#Contributing)
+ * [Questions](#Questions)
+    
+ ## Description
+ Unit 2-MERN Homework: Google Books Search App
+ React-based Google Books Search app. This assignment required React components, helper/util functions, and React lifecycle methods to query and display books based on user searches. Also uses Node, Express and MongoDB so that users can save books to review or purchase later.
+ A Progressive Web Application (PWA). The application can be downloaded to your local pc or smart device.
 
+ Users will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they will populate the total when brought back online.
+
+ ## Installation
+* Follow these instructions to install a PWA for your specific smartphone OS:
+
+* iOs:
+
+  * 1. Navigate to [https://tlg-google-books-search.herokuapp.com/](https://tlg-google-books-search.herokuapp.com/) with Safari.
+
+  * 2. Tap the Share button in Safari.
+
+  * 3. Tap the icon labeled Add to Home Screen.
+
+  * 4. Tap Add in the upper-right corner.
+
+  * 5. Name your PWA, then tap Add in the upper-right corner.
+
+* Android:
+
+  * 1. Navigate to [https://tlg-google-books-search.herokuapp.com/](https://tlg-google-books-search.herokuapp.com/) with Chrome.
+
+  * 2. Tap the menu button in the upper right corner of Chrome.
+
+  * 3. Tap the icon labeled Add to Home Screen.
+
+  * 4. Name your PWA, then tap Add below the promp.
+
+
+ ## Usage
+ The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, the total will be populated when brought back online.
+
+ Offline Functionality:
+  * Enter deposits offline
+  * Enter expenses offline
+
+ When brought back online:
+  * Offline entries should be added to tracker.
+
+ ## License
+ undefined
+
+ ## Contributing
+ N/A
+
+ ## Questions
+  ![GitHub Profile Pic](https://avatars.githubusercontent.com/TLGeorge)
+      
+    
+ ## Email
+  taneishalg@gmail.com
 ### Overview
 
 In this activity, you'll create a new React-based Google Books Search app. This assignment requires you to create React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. You'll also use Node, Express and MongoDB so that users can save books to review or purchase later.
@@ -90,74 +155,10 @@ Having an active and healthy commit history on GitHub is important for your futu
 
   * [Socket.io NPM package](https://www.npmjs.com/package/socket.io)
 
-### Reminder: Submission on BCS
 
-* **This assignment must be deployed.** * Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!
-
-- - -
-
-### Minimum Requirements
-
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Hosting on Heroku and adding a README.md are required for this homework. In addition, add this homework to your portfolio, more information can be found below.
-
-- - -
-
-### Create a README.md
-
-Add a `README.md` to your repository describing the project. Here are some resources for creating your `README.md`. Here are some resources to help you along the way:
-
-* [About READMEs](https://help.github.com/articles/about-readmes/)
-
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-
-- - -
 
 ### Add To Your Portfolio
 
 After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
 
 - - -
-
-### Hosting on Heroku
-
-Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database.
-
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details.
-
-- - -
-
-### One More Thing
-
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-**Good Luck!**
-
-# Create React Express App
-
-## About This Boilerplate
-
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
