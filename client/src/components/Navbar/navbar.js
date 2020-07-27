@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
-export default function Nav() {
+export default function BarNav() {
     return (
         <Navbar bg="light" expand="lg">
             <Navbar.Brand href="#home">React-Google-Books-Search</Navbar.Brand>
