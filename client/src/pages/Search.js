@@ -42,6 +42,7 @@ class Search extends React.Component {
                 <div>
                     <br></br>
                     <SearchBar />
+                    {/* <Results /> */}
 
                 </div>
             </container>
