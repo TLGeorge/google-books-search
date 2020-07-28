@@ -16,12 +16,12 @@
 
 import Saved from './Saved'
 import Search from './Search'
-import Details from './Details'
+// import Details from './Details'
 import NoMatch from './NoMatch'
 
 export {
     Saved,
     Search,
-    Details,
+    // Details,
     NoMatch
 }
