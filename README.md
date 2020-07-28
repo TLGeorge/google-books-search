@@ -58,5 +58,3 @@
     
  ## Email
   taneishalg@gmail.com
-
-<!-- \"nodemon --ignore 'client/*'\" -->
