@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from 'react-router-dom'
 import BarNav from './components/Navbar/navbar';
-import { Search, Saved } from './pages'
+import { Search, Saved, NoMatch, Details } from './pages'
 import GBJumbotron from "./components/Jumbotron/jumbotron";
 
 
@@ -18,6 +18,12 @@ function App() {
         </Route>
         <Route path='/saved'>
           <Saved />
+        </Route>
+        <Route path='/details'>
+          <Details />
+        </Route>
+        <Route path='/nomatch'>
+          <NoMatch />
         </Route>
       </Switch>
     </div>

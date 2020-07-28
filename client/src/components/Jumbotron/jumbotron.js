@@ -12,8 +12,8 @@ export default function GBJumbotron() {
     </p>
                 </Container>
             </Jumbotron>
-        </div>
 
+        </div>
     )
 
 }
