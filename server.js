@@ -19,6 +19,12 @@ app.use(routes);
 //connect to db with mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
+// // Send every request to the React app
+// // Define any API routes before this runs
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
+
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

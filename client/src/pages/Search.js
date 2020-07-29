@@ -70,10 +70,10 @@ export default function SearchBar() {
             {/* <Container>
                 {bookResults.length(
                     <Row>
-                        {bookResults.map(book => {
-                            return (
-                                <ResultCard
-                                    key={book.id ? book.id : ""}
+                        {bookResults.map(book => {  
+                            return (  
+                                <ResultCard  
+                                    key={book.id ? b  ook.id : ""}
                                     title={}
                                     authors={}
                                     image={}
