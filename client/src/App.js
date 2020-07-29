@@ -13,10 +13,10 @@ function App() {
       <GBJumbotron />
       <Router>
         <Switch>
-          <Route path='/search'>
+          <Route exact path={['/', '/search']}>
             <Search />
           </Route>
-          <Route path='/saved'>
+          <Route exact path='/saved'>
             <Saved />
           </Route>
           {/* <Route path='/details'>

@@ -2,7 +2,7 @@ import React from 'react';
 import Media from 'react-bootstrap/Media';
 import { Row } from 'react-bootstrap';
 // import API from '../utils/API';
-// import { ViewButton, DeleteButton } from '../Buttons'
+import { ViewButton, SaveButton } from '../Buttons'
 
 export default function ResultCard(props) {
     return (
@@ -24,8 +24,8 @@ export default function ResultCard(props) {
                         alt={book.title}
                         href={book.link}
                     />
-                    {/* <ViewButton /> */}
-                    {/* <DeleteButton /> */}
+                    <ViewButton href={props.link} />
+                    < SaveButton />
                 </Media>
             )}
         </Row >

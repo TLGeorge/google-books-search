@@ -1,21 +1,10 @@
 import React from "react";
 import Media from 'react-bootstrap/Media';
 import { Row, Container } from 'react-bootstrap';
-import "./style.css";
+import { DeleteButton, ViewButton, SaveButton } from '../Buttons'
+
 
 // This file exports both the List and ListItem components
-
-// export function List({ children }) {
-//     return (
-//         <div className="list-overflow-container">
-//             <ul className="list-group">{children}</ul>
-//         </div>
-//     );
-// }
-
-// export function ListItem({ children }) {
-//     return <li className="list-group-item">{children}</li>;
-// }
 
 export default function List({ children }) {
     return (
@@ -25,7 +14,34 @@ export default function List({ children }) {
     );
 }
 
-export default function ListItem({ children }) {
+export function ListItem({ children }) {
     return <Media className="list-group-item">{children}</Media>;
 }
 
+export function ResultCard(props) {
+    return (
+        <div>
+            <Media>
+                <Media.Body>
+                    <h5> {props.title} </h5>
+                    <h4> {props.authors} </h4>
+                    <p>
+                        {props.description}
+                    </p>
+                </Media.Body>
+                <img
+                    width={64}
+                    height={64}
+                    className="ml-3"
+                    src={props.image}
+                    alt={props.title}
+                    href={props.link}
+                />
+                <ViewButton />
+                <SaveButton />
+
+            </Media>
+        </div>
+
+    )
+}

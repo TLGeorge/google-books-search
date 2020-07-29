@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button'
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-// import ResultCard from '../ResultCard/resultcard';
+import { List, ListItem, ResultCard } from '../components/List';
+import { SaveButton, ViewButton } from '../components/Buttons/'
 import API from '../utils/API'
 
 
@@ -16,7 +17,7 @@ export default function SearchBar() {
     async function handleInputChange(event) {
         const { value } = event.target;
         await setSearchForm(value)
-        console.log('SEARCH -->', search)
+        console.log('input change -->', search)
     };
 
     // When the form is submitted, use the API.saveBook method to save the book data
@@ -28,10 +29,10 @@ export default function SearchBar() {
             if (search) {
                 const results = await API.googleBooksSearch(search)
 
+                console.log('search ', search)
+                console.log(results)
                 await setBooks(results.items)
                 await setSearchForm('')
-                console.log('books ---> ', books)
-                console.log('search ', search)
             }
         } catch (error) {
             console.log(error)
@@ -67,18 +68,24 @@ export default function SearchBar() {
                 </Jumbotron>
             </Container>
 
-            {/* <Container>
-                {bookResults.length(
-                    <Row>
-                        {bookResults.map(book => {  
-                            return (  
-                                <ResultCard  
-                                    key={book.id ? b  ook.id : ""}
-                                    title={}
-                                    authors={}
-                                    image={}
-                                    link={} >
-                                    <SaveBtn onClick={() => saveBook({
+
+            <Container>
+                {books.length ? (
+                    <div>
+                        {books.map(book => {
+                            return (
+                                <ResultCard
+                                    key={book.id ? book.id : ""}
+                                    title={book.volumeInfo.title ? book.volumeInfo.title : ""}
+                                    authors={book.volumeInfo.authors ? book.volumeInfo.authors : ""}
+                                    description={book.volumeInfo.description ? book.volumeInfo.description : ""}
+                                    src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ""}
+                                    image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ""}
+                                    alt={book.volumeInfo.title ? book.volumeInfo.title : ""}
+                                    href={book.volumeInfo.infoLink ? book.volumeInfo.infoLink : ""}
+                                >
+                                    <ViewButton href={book.volumeInfo.infoLink ? book.volumeInfo.infoLink : ""} />
+                                    <SaveButton onClick={() => saveBook({
                                         title: book.volumeInfo.title,
                                         authors: book.volumeInfo.authors,
                                         googleId: book.id,
@@ -89,9 +96,11 @@ export default function SearchBar() {
                                 </ResultCard>
                             )
                         })}
-                    </Row>
-                )}
-            </Container> */}
+                    </div>
+                ) : (
+                        <></>
+                    )}
+            </Container>
         </div>
 
     );

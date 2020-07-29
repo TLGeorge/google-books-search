@@ -1,14 +1,20 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 
-export default function ViewButton() {
+export function ViewButton(props) {
     return (
-        <Button variant="outline-primary">View</Button>
+        <Button variant="outline-primary" {...props}>View</Button>
     )
 }
 
-// export default function DeleteButton() {
-//     return (
-//         <Button variant="outline-warning">Delete</Button>
-//     )
-// }
+export function SaveButton(props) {
+    return (
+        <Button variant="outline-success" {...props}>Save</Button>
+    )
+}
+
+export function DeleteButton(props) {
+    return (
+        <Button variant="outline-danger" {...props}>Delete</Button>
+    )
+}
