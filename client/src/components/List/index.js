@@ -35,9 +35,9 @@ export function ResultCard(props) {
                     className="ml-3"
                     src={props.image}
                     alt={props.title}
-                    href={props.link}
+
                 />
-                <ViewButton />
+                <ViewButton href={props.link} />
                 <SaveButton />
 
             </Media>

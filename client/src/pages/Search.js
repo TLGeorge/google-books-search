@@ -29,7 +29,7 @@ export default function SearchBar() {
             if (search) {
                 const results = await API.googleBooksSearch(search)
 
-                console.log('search ', search)
+                console.log('searched ', search)
                 console.log(results)
                 await setBooks(results.items)
                 await setSearchForm('')
@@ -40,7 +40,7 @@ export default function SearchBar() {
         console.log('BOOKS(after api call) -->', books)
     };
     function saveBook(book) {
-        console.log(book)
+        console.log('this book--->', book)
         API.insertBook(book)
     }
 
@@ -71,7 +71,7 @@ export default function SearchBar() {
 
             <Container>
                 {books.length ? (
-                    <div>
+                    <Row>
                         {books.map(book => {
                             return (
                                 <ResultCard
@@ -82,9 +82,9 @@ export default function SearchBar() {
                                     src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ""}
                                     image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ""}
                                     alt={book.volumeInfo.title ? book.volumeInfo.title : ""}
-                                    href={book.volumeInfo.infoLink ? book.volumeInfo.infoLink : ""}
                                 >
-                                    <ViewButton href={book.volumeInfo.infoLink ? book.volumeInfo.infoLink : ""} />
+                                    <ViewButton
+                                        href={book.volumeInfo.infoLink ? book.volumeInfo.infoLink : ""} />
                                     <SaveButton onClick={() => saveBook({
                                         title: book.volumeInfo.title,
                                         authors: book.volumeInfo.authors,
@@ -96,7 +96,7 @@ export default function SearchBar() {
                                 </ResultCard>
                             )
                         })}
-                    </div>
+                    </Row>
                 ) : (
                         <></>
                     )}

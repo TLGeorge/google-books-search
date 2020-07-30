@@ -3,7 +3,8 @@ import Button from 'react-bootstrap/Button';
 
 export function ViewButton(props) {
     return (
-        <Button variant="outline-primary" {...props}>View</Button>
+        <Button variant="outline-primary" {...props}>View
+            <a {...props} target="_blank" > </a></Button>
     )
 }
 
